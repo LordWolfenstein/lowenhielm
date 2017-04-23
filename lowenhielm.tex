@@ -6,14 +6,19 @@
 \usepackage{idxlayout}
 \usepackage{sectsty}
 \usepackage{gensymb}
-\usepackage{beramono}
-\usepackage[T1]{fontenc}
+\usepackage{listings}
 
 \setlength{\parindent}{0pt}
 \chapterfont{\Large}
 \chaptertitlefont{\Large}
 \sectionfont{\large}
 \geometry{a6paper, textwidth=80mm, textheight=120mm}
+\lstset{
+  literate={ö}{{\"o}}1
+           {ä}{{\"a}}1
+           {å}{{\aa}}1,
+           stepnumber=10
+}
 
 \title{Greve Löwenhielms Sångbok Remastered}
 
@@ -30,7 +35,7 @@ Det finns ingen copyrightsida i den gamla sångboken som Karlstads studentkår g
 
 Den är typsatt för A6-papper men kan även skrivas ut som häfte på A5-papper. Kom med pdf-filen till Tryckeriet så fixar dom det säkert åt dig.\\
 
-Är det någon sång som du vill läggs till så är det bara att göra det på:\\
+Är det någon sång som du vill lägga till så är det bara att göra det på:\\
 \texttt{\small github.com/LordWolfenstein/Lowenhielm/}
 \end{abstract}
 \thispagestyle{empty}
@@ -263,13 +268,14 @@ raj raj...
 \textit{Den som inte kan den här utantill bör gå hem redan nu!}
 
 \section{The BASIC Song}\index{The BASIC Song}
-\textit{Mel: Mors lilla Olle}\\
-
-\texttt{10 \textbf{LET} oss nu fatta i våra glas\\
-20 \textbf{INPUT} en klunk utav det som där has\\
-30 \textbf{IF} du fatt nog \textbf{THEN} till 50 min vän\\
-40 \textbf{ELSE} \textbf{GOTO}-baka till 10 igen\\
-50 \textbf{END}}
+\textit{Mel: Mors lilla Olle}
+\begin{lstlisting}[caption=song.bas]
+10 LET oss nu fatta i våra glas
+20 INPUT en klunk utav det som där has
+30 IF du fatt nog THEN till 50 min vän
+40 ELSE GOTO-baka till 10 igen
+50 END
+\end{lstlisting}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -427,7 +433,7 @@ ingen idé för er att ni sitter här och gråter.
 W\ kg\ m\ Wb\ s\\
 $\Omega$m\ T\ A\ rad\\
 cd Sv N s\\
-$\Omega$A M lx dB\\
+$\Omega$A m lx dB\\
 \degree C W/m$^2$\\
 J/kg H V C\\
 kg/m$^3$ mol\\
@@ -512,7 +518,7 @@ han anhölls redan samma kväll\\
 Och sattes i en ensamcell\\
 att snurra och slänga sin kuk.
 
-\item När molet kom i rätten opp\\
+\item När målet kom i rätten opp\\
 sa åklagarn: Det får bli ett stopp.\\
 Man får ej vifta med sin snopp\\
 och snurra och svänga sin kuk, fast
@@ -520,7 +526,7 @@ och snurra och svänga sin kuk, fast
 \item Men dommarn han var tollerant\\
 Han sa: Själv gör jag likadant\\
 Jag tycker det är intressant\\
-att snurra och slänga sin kuk.\\
+att snurra och svänga sin kuk.\\
 för att jag har också en stor...
 
 \item Så Theobald släpptes fri\\
@@ -534,6 +540,19 @@ Från dess topp till dess rot\\
 och en medelstor ryggsäck till pung, pung, pung, pungeli-pung, pung, pung.
 
 \end{enumerate}
+
+\section{Bamsevisan (alternativ version)}\index{Bamsevisan (alternativ version)}
+\textit{Mel: Bamses signaturmelodi}\\
+
+Bamse knullar lille skutt i baken\\
+svansen kittlar skönt när man är naken,\\
+skalman runkar, farmor kokar honung\\
+så att bamse kan få stånd igen\\
+
+In och ut i alla hål\\
+är mer än mickelina tål,\\
+för det är svårt att säga stopp\\
+med munnen full av snopp.
 
 \cleardoublepage
 \idxlayout{columns=1}
